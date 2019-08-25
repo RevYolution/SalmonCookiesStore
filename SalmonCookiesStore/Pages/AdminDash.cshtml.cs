@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace SalmonCookiesStore.Pages
 {
-    public class AboutModel : PageModel
+    public class AdminDashModel : PageModel
     {
         public string Message { get; set; }
 
