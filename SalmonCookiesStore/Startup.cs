@@ -23,10 +23,10 @@ namespace SalmonCookiesStore
         {
             Environment = environment;
 
-            var builder = new ConfigurationBuilder()
-                .AddEnvironmentVariables();
-            builder.AddUserSecrets<Startup>();
-            Configuration = builder.Build();
+            //var builder = new ConfigurationBuilder()
+            //    .AddEnvironmentVariables();
+            //builder.AddUserSecrets<Startup>();
+            //Configuration = builder.Build();
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -42,16 +42,18 @@ namespace SalmonCookiesStore
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            string ConnectionString = Environment.IsDevelopment()
-            ? Configuration.GetConnectionString("DefaultConnection")
-            : Configuration.GetConnectionString("ProductionConnection");
+            //string ConnectionString = Environment.IsDevelopment()
+            //? Configuration.GetConnectionString("DefaultConnection")
+            //: Configuration.GetConnectionString("ProductionConnection");
 
-            string UserConnectionString = Environment.IsDevelopment()
-                ? Configuration.GetConnectionString("UserConnection")
-                : Configuration.GetConnectionString("UserProductionConnection");
+            //string UserConnectionString = Environment.IsDevelopment()
+            //    ? Configuration.GetConnectionString("UserConnection")
+            //    : Configuration.GetConnectionString("UserProductionConnection");
 
 
-            services.AddDbContext<SalmonStoresDbContext>(options => options.UseSqlServer(ConnectionString));
+            //services.AddDbContext<SalmonStoresDbContext>(options => options.UseSqlServer(ConnectionString));
+            //services.AddDbContext<UsersDbContext>(options => options.UseSqlServer(ConnectionString));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
