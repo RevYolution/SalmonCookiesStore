@@ -4,3 +4,50 @@
     Layout = "_Layout";
 }
 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Register Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card-deck" id="register_deck">
+            <div class="card mx-auto" id="register_card">
+                <form method="post">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="Input.FirstName">First Name</label>
+                            <input asp-for="Input.FirstName" type="text" class="form-control" placeholder="First Name" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="Input.LastName">Last Name</label>
+                            <input asp-for="Input.LastName" type="text" class="form-control" placeholder="Last Name" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="Input.Email">Email</label>
+                            <input asp-for="Input.Email" type="text" class="form-control" placeholder="Email" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="Input.Password">Password</label>
+                            <input asp-for="Input.Password" type="password" class="form-control" />
+                        </div> 
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="Input.ConformationPassword">Confirm Password</label>
+                            <input asp-for="Input.ConformationPassword" type="password" class="form-control" />
+                        </div>
+                    </div>
+                    <button type="submit">Register Account</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
